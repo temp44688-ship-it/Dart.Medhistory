@@ -1,26 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
 import 'app.dart';
-import 'features/consultation/presentation/bloc/consultation_bloc.dart';
+import 'core/constants/app_constants.dart';
 import 'injection_container.dart' as di;
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Supabase.initialize(
-    url: 'YOUR_SUPABASE_URL',
-    anonKey: 'YOUR_SUPABASE_ANON_KEY',
+    url: AppConstants.supabaseUrl,
+    anonKey: AppConstants.supabaseAnonKey,
   );
 
   await di.init();
-
-  runApp(
-    MultiBlocProvider(
-      providers: [
-        BlocProvider(create: (_) => di.sl<ConsultationBloc>()),
-      ],
-      child: const MedHistoryApp(),
-    ),
-  );
+  runApp(const MedHistoryApp());
 }
