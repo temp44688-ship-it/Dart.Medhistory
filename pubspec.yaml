@@ -1,0 +1,30 @@
+name: medhistory
+description: Medical history application built with Flutter, Clean Architecture and Supabase.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+  flutter: '>=3.24.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  supabase_flutter: ^2.10.3
+  go_router: ^16.2.0
+  get_it: ^8.2.0
+
+  # Functional programming primitives for Clean Architecture.
+  dartz: ^0.10.1
+
+  # Value equality for domain entities.
+  equatable: ^2.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
