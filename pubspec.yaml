@@ -4,8 +4,8 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.5.0 <4.0.0'
-  flutter: '>=3.24.0'
+  sdk: '>=3.8.0 <4.0.0'
+  flutter: '>=3.32.0'
 
 dependencies:
   flutter:
@@ -14,11 +14,7 @@ dependencies:
   supabase_flutter: ^2.10.3
   go_router: ^16.2.0
   get_it: ^8.2.0
-
-  # Functional programming primitives for Clean Architecture.
   dartz: ^0.10.1
-
-  # Value equality for domain entities.
   equatable: ^2.0.7
 
 dev_dependencies:
